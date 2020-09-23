@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  font-family: 'Pavanam', sans-serif;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+video {
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Container */
+.container {
+  min-width: 580px;
+  min-height: 304px;
+  color: #3a3a3a;
+  margin: 0 auto;
+  padding: 2.5rem 5rem;
+  border-radius: 1rem;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form */
+.form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  margin-left: 1.2rem;
+  font-size: 1rem;
+}
+
+input {
+  color: #3a3a3a;
+  font-size: 1.8rem;
+  font-family: 'Pavanam', sans-serif;
+  width: 95%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: none;
+  border-bottom: 3px solid #232323;
+  background: #fff;
+  outline: none;
+  background-color: transparent;
+}
+
+input:focus,
+input:hover {
+  border-bottom: 3px solid #239c6e;
+}
+
+/* Button */
+button {
+  width: 80%;
+  display: block;
+  height: 4rem;
+  border-radius: 2rem;
+  margin: 1.2rem auto;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Pavanam', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  background: linear-gradient(to bottom right, #0a7a59, #095e45);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all linear 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to top left, #0a7a59, #095e45);
+}
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Countdown */
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  font-size: 2rem;
+  list-style-type: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: rgb(9, 87, 97);
+}
+
+li span {
+  display: block;
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* Complete */
+.complete {
+  position: relative;
+  top: 3rem;
+  margin: 0 auto;
+}
+
+.complete-title {
+  animation: complete 2s infinite ease-in-out;
+}
+
+@keyframes complete {
+  0% {
+    color: #333333;
+  }
+
+  50% {
+    color: #239c6e;
+    transform: scale(1.1);
+  }
+
+  100% {
+    color: #333333;
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .video-background {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  video {
+    object-fit: cover;
+    object-position: 70%;
+    margin-top: -1px;
+  }
+
+  .container {
+    min-width: unset;
+    width: 95vw;
+    min-height: 24.5rem;
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .input-container {
+    top: unset;
+  }
+
+  .countdown {
+    position: relative;
+    top: 1rem;
+  }
+
+  .form {
+    width: unset;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  #complete-button {
+    margin-top: 0rem;
+    align-content: center;
+  }
+
+  li {
+    font-size: 1.3rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+
+  li span {
+    font-size: 4rem;
+  }
+}
